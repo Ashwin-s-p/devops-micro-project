@@ -6,15 +6,15 @@ branches:
 - main 
 
 jobs:
-build:
-runs-on: ubuntu-lastest
+  build:
+    runs-on: ubuntu-lastest
 
-steps:
-- name: Checkout Repo
-uses: actions/checkout@v3
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
 
-- name: Set up Docker
-uses: docker/setup-buildx-action@v2
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v2
 
-- name: Build Docker image
-run: docker build -t ashwin-micro-app .
+      - name: Build Docker image
+        run: docker build -t ashwin-micro-app .
